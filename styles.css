@@ -1,5 +1,7 @@
-.row-div {
+.rowdiv {
   background-color: pink;  
   border:10px;
   border-color:black;
+  display:flex;
+  justify-content: space-between;
 }
