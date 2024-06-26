@@ -1,7 +1,16 @@
-.rowdiv {
-  background-color: pink;  
-  border:10px;
-  border-color:black;
-  display:flex;
-  justify-content: space-between;
+.divstyle {
+  background-color: hotpink;  
+  margin:0px;
+  padding: 10px;
+  border:1px solid black;
+  width:25px;
+  height:25px;
+  
+}
+
+.container {
+ display: flex;
+ flex-wrap: wrap;
+ 
+  
 }

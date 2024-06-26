@@ -4,24 +4,35 @@ const body=document.body;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-for (let i=0; i<=15;i++)
-    {   
-       
-        const rowDiv = document.createElement('div');
 
-        rowDiv.className = 'rowdiv';
 
+    function divCreate (noOfDivs) 
+    { 
         
+           
+                for (let i=1; i<=(noOfDivs*noOfDivs); i++)
+                    {
+                    const divStyle = document.createElement('div');
+                    divStyle.className = 'divstyle';
+                    
+                    const container = document.querySelector('.container');
+                    container.append(divStyle);
+                    console.log("i");
+                     }
 
-    
-      
-        const container = document.getElementById('container');
-        rowDiv.innerText = 'Test';
-        container.appendChild(rowDiv);
+                
+           
 
-    };
+            
+
+
+
+
+    }
+
+    divCreate(16);
+
+
 
   
 });
-
-
