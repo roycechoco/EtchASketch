@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     divStyle.textContent = `${i}`;
                     const container = document.querySelector('.container');
                     container.append(divStyle);
-                    console.log("i");
+                    
                      }
 
                 
@@ -43,7 +43,26 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
  
+   //BTN
+        function NewDivs (dimension)
+        {
+        let btn = document.querySelector('.btn');
+        
+        btn.addEventListener('click', function() 
+        {
+            let divStyle = document.querySelectorAll('.divstyle');
+            let dimension = window.prompt("Choose how many squares per side for new grid");
+            console.log(dimension);
+            divStyle.remove();
+        })
+        
 
+        }
+    //Remove old divs and adding new one
+
+
+
+    
 
 
 
