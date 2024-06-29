@@ -25,20 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     divCreate(16);
 
-    let color = [, "#3C9EE7", "#E7993C",
-            "#E73C99", "#3CE746", "#E7993C"]
-
+    let color = [,"#808080"];
+    
 
 
     let elements = document.querySelectorAll('.divstyle');
 
-    elements.forEach( element  =>
+    elements.forEach( elements  =>
 
     {
-        element.addEventListener("mouseover", function() 
+        elements.addEventListener("mouseover", function() 
         {
             elements.style.background
-            = color[(Math.floor(Math.random() * color.length))];
+            = color[(Math.floor(color.length))];
         })
 
     })

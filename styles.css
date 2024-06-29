@@ -23,6 +23,10 @@
   
 }
 
+.container .divstyle:hover {
+  background-color: gray;
+}
+
   
 
 
