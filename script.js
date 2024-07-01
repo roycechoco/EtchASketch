@@ -4,7 +4,7 @@ const body=document.body;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    
+    //creating divs
     function divCreate (noOfDivs) 
     { 
        
@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     divStyle.className = 'divstyle';
                     divStyle.textContent = `${i}`;
                     const container = document.querySelector('.container');
+
+                  
+                    divStyle.style.width = 'calc(100% / `${noOfDivs}` )';
+                    divStyle.style.height = 'calc(100% / `${noOfDivs}` )';
                     container.append(divStyle);
                     
                      }
@@ -24,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
     divCreate(16);
+
+    //Hovering Method
 
     let color = [,"#808080"];
     
@@ -51,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
        });
     }
 
+
+
    //BTN
    
         let btn = document.querySelector('.btn');
@@ -58,17 +66,28 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function() 
         {
             let divStyle = document.querySelectorAll('.divstyle');
-            let dimension = window.prompt("Choose how many squares per side for new grid");
-            console.log(dimension);
+            var dimension = window.prompt("Choose how many squares per side for new grid");
+            var dimensionNumber = parseInt(dimension);
+            console.log(dimensionNumber);
             removeDiv();
+
+            if (dimensionNumber > 100 || dimensionNumber <= 0)
+                {
+                
+                    console.log ("error");
+                }
+
+            else {
+                 // Function for adding new divs when button clicked
+                 divCreate(dimensionNumber);
+            }
            
         })
         
 
        
 
-        
-    //Remove old divs 
+      // Function for adding new divs when button clicked
 
 
       
