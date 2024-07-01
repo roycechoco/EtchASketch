@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //Function for removing divs
     function removeDiv() {
-        const oldDivs = document.getElementsByClassName('.divStyle');
-        const parent =   ;
-        parent.removeChild(oldDivs);
+       elements.forEach(div => {
+        div.style.display= 'none';
+       });
     }
 
    //BTN
