@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 
+
     let elements = document.querySelectorAll('.divstyle');
 
     elements.forEach( elements  =>
@@ -42,10 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     })
     
- 
+
+    //Function for removing divs
+    function removeDiv() {
+        const oldDivs = document.getElementsByClassName('.divStyle');
+        const parent =   ;
+        parent.removeChild(oldDivs);
+    }
+
    //BTN
-        function NewDivs (dimension)
-        {
+   
         let btn = document.querySelector('.btn');
         
         btn.addEventListener('click', function() 
@@ -53,16 +60,21 @@ document.addEventListener('DOMContentLoaded', function() {
             let divStyle = document.querySelectorAll('.divstyle');
             let dimension = window.prompt("Choose how many squares per side for new grid");
             console.log(dimension);
-            divStyle.remove();
+            removeDiv();
+           
         })
         
 
-        }
-    //Remove old divs and adding new one
+       
+
+        
+    //Remove old divs 
 
 
+      
 
-    
+   
+
 
 
 
