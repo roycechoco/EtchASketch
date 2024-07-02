@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     divStyle.className = 'divstyle';
                     divStyle.textContent = `${i}`;
                     
-
+                    const containerWidth = container.clientWidth; // Get actual width of container
+                    const numCols = Math.floor(containerWidth / noOfDivs); // 100 is the width of each div
+                    
+                    const containerHeight = container.clientHeight;
+                    const numRows = Math.floor(containerHeight / noOfDivs);
                   
                     divStyle.style.width = `calc(100% / ${noOfDivs} )`;
                     divStyle.style.height = `calc(100% / ${noOfDivs} )`;
@@ -52,12 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
 
-    //Function for removing divs
-   // function removeDiv() {
-     //  elements.forEach(div => {
-     //   div.style.display= 'none';
-     //  });
-    //}
+    
 
 
 
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function btnClicked()
         {
-           // removeDiv();
+           
            container.innerHTML ='';
            
             let divStyle = document.querySelectorAll('.divstyle');
